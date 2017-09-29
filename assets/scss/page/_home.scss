@@ -390,6 +390,9 @@
                     @include breakpoint (tablet) {
                         padding: 15px;
                     }
+                    @include breakpoint (phone) {
+                        padding: 10px;
+                    }
                     .img-pro {
                         position: relative;
                         height: 0;
