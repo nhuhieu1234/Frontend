@@ -1,25 +1,70 @@
-@font-face {
-	font-family: 'OpenSans Bold';
-	src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
-}
-@font-face {
-	font-family: 'OpenSans Regular';
-	src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
-}
-@font-face {
-	font-family: 'OpenSans Light';
-	src: url("../fonts/OpenSans-Light.ttf") format("truetype");
-}
-@font-face {
-	font-family: 'Pacifico';
-	src: url("../fonts/Pacifico.ttf") format("truetype");
+// @font-face {
+// 	font-family: 'OpenSans Bold';
+// 	src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+// }
+// @font-face {
+// 	font-family: 'OpenSans Regular';
+// 	src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+// }
+// @font-face {
+// 	font-family: 'OpenSans Light';
+// 	src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+// }
+// @font-face {
+// 	font-family: 'OpenSans ExtraBold';
+// 	src: url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+// }
+// @font-face {
+// 	font-family: 'OpenSans Semibold';
+// 	src: url("../fonts/OpenSans-Semibold.ttf") format("truetype");
+// }
+// @font-face {
+// 	font-family: 'BebasNeue';
+// 	src: url("../fonts/BebasNeue.otf") format("opentype");
+// }
+
+@import "./node_modules/sass-font-face/_font-face.scss";
+
+
+$lp-bars: "\e901";
+$lp-search: "\e902";
+$lp-shopping-cart: "\e900";
+ 
+$openSans-regular: 'Open Sans Regular';
+$bebasNeue-regular: 'BebasNeue Regular';
+$lpicon: 'lpicon';
+@include font-face($openSans-regular, '../font/', 'OpenSans-Regular-webfont', 'open_sansregular');
+@include font-face($bebasNeue-regular, '../font/', 'BebasNeue Regular', 'bebas_neueregular');
+@include font-face($lpicon, '../font/', 'lpicon', 'lpicon');
+ 
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lpicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-	font-family: 'OpenSans ExtraBold';
-	src: url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+.lp-bars {
+  &:before {
+    content: $lp-bars;
+  }
 }
-@font-face {
-	font-family: 'OpenSans Semibold';
-	src: url("../fonts/OpenSans-Semibold.ttf") format("truetype");
+.lp-search {
+  &:before {
+    content: $lp-search;
+  }
 }
+.lp-shopping-cart {
+  &:before {
+    content: $lp-shopping-cart;
+  }
+} 

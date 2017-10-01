@@ -1,0 +1,31 @@
+// @font-face {
+//   font-family: 'lpicon';
+//   src:  url('#{$icomoon-font-path}/lpicon.eot?8fk7q2');
+//   src:  url('#{$icomoon-font-path}/lpicon.eot?8fk7q2#iefix') format('embedded-opentype'),
+//     url('#{$icomoon-font-path}/lpicon.ttf?8fk7q2') format('truetype'),
+//     url('#{$icomoon-font-path}/lpicon.woff?8fk7q2') format('woff'),
+//     url('#{$icomoon-font-path}/lpicon.svg?8fk7q2#lpicon') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// i {
+//   /* use !important to prevent issues with browser extensions that change fonts */
+//   font-family: 'lpicon' !important;
+//   speak: none;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-variant: normal;
+//   text-transform: none;
+//   line-height: 1;
+
+//   /* Better Font Rendering =========== */
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .lp-lp01 {
+//   &:before {
+//     content: $lp-lp01;
+//   }
+// }

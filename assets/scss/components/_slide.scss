@@ -4,6 +4,9 @@
         bottom: -25px;
     }
 }
+.slick-dots li {
+    margin: 0;
+}
 .slick-dots li button::before {
     font-size: 30px;
     @include breakpoint (phone) {
