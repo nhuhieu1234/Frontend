@@ -48,8 +48,7 @@
                         #exampleInputAmount {
                             border-right: 0;
                             -webkit-box-shadow: none;
-                                    box-shadow: none;
-                            
+                            box-shadow: none;
                         }
                         .input-group-addon {
                             background: transparent;
@@ -62,7 +61,8 @@
                                 }
                             }
                         }
-                        #exampleInputAmount, .input-group-addon{
+                        #exampleInputAmount,
+                        .input-group-addon {
                             border-radius: 1px;
                             border-color: $color-gray4;
                         }
@@ -73,6 +73,7 @@
                             display: inline-block;
                         }
                         a {
+                            cursor: pointer;
                             color: $color-gray5;
                             font-size: 20px;
                             color: $color-gray;
@@ -85,7 +86,7 @@
                             i {
                                 // vertical-align: -moz-middle-with-baseline;
                                 vertical-align: middle;
-                                @include breakpoint (phone){
+                                @include breakpoint (phone) {
                                     vertical-align: bottom;
                                     vertical-align: -webkit-baseline-middle;
                                 }
@@ -144,8 +145,7 @@
                             color: $color-gray2;
                         }
                         i {
-                            font-size: 27px;
-                            // vertical-align: -moz-middle-with-baseline;
+                            font-size: 27px; // vertical-align: -moz-middle-with-baseline;
                             vertical-align: middle;
                         }
                     }
@@ -173,13 +173,14 @@
                     color: $color-white;
                     font-weight: bold;
                     padding: 0 25px;
-                    font-size: 18px;
-                    border-right: 1px solid $color-white;
+                    font-size: 21px;
+                    border-right: 2px solid $color-white;
                     @include breakpoint (small-desktop) {
-                        font-size: 13px;
+                        font-size: 14px;
                     }
                     @include breakpoint (tablet) {
                         padding: 0 15px;
+                        font-size: 13px;
                     }
                     @include breakpoint (small-tablet) {
                         border: 0;
@@ -196,11 +197,11 @@
     .content {
         .slide1 {
             font-family: $bebasNeue-regular;
-            background: $color-green;
-            padding: 5% 0;
+            background: url(../img/bg.png);
+            padding: 4% 0 1% 0;
             color: $color-white;
             @include breakpoint (small-tablet) {
-                padding: 75px 0 15px 0;
+                padding-top: 75px;
             }
             .lazy {
                 .slick-arrow {
@@ -209,77 +210,97 @@
                 .img-slide {
                     width: 35%;
                     float: left;
-                    padding-right: 15px;
+                    padding: 0 0 0 10%;
                     @include breakpoint (tablet) {
-                        width: 45%;
+                        padding: 0;
+                        padding-right: 5%;
                     }
-                    img {
-                        width: 300px;
-                        height: 300px;
-                        @include breakpoint (tablet) {
-                            width: 260px;
-                            height: 270px;
-                        }
-                        @include breakpoint (small-tablet) {
-                            width: 200px;
-                            height: 210px;
-                        }
-                        @include breakpoint (phone) {
-                            width: 160px;
-                            height: 165px;
-                        }
-                        @include breakpoint (mid-phone) {
-                            width: 125px;
-                            height: 130px;
+                    .wrp {
+                        height: 0;
+                        overflow: hidden;
+                        position: relative;
+                        padding-top: 120%;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
                         }
                     }
                 }
                 .text-slide {
-                    width: 55%;
+                    width: 65%;
                     float: left;
-                    padding-left: 15px;
-                    .title {
-                        font-weight: bold;
-                        font-size: 45px;
-                        @include breakpoint (tablet) {
-                            font-size: 30px;
-                        }
-                        @include breakpoint (small-tablet) {
-                            font-size: 20px;
-                        }
-                        @include breakpoint (phone) {
-                            font-size: 15px;
-                        }
-                        @include breakpoint (mid-phone) {
-                            font-size: 13px;
-                        }
+                    padding: 0 10% 0 10%;
+                    @include breakpoint (tablet) {
+                        padding: 0;
                     }
-                    .des {
-                        font-family: $openSans-regular;
-                        font-size: 17px;
-                        @include breakpoint (tablet) {
-                            font-size: 15px;
-                        }
-                        @include breakpoint (small-tablet) {
-                            font-size: 12px;
-                        }
-                    }
-                    .btn-shop {
-                        margin-top: 5%;
-                        a {
-                            background: transparent;
-                            border: 2px solid $color-white;
-                            color: $color-white;
+                    .wrp {
+                        .title {
                             font-weight: bold;
-                            &:hover {
-                                background: $color-white;
-                                color: $color-green;
-                                -webkit-transition: all .3s;
-                                transition: all .3s;
+                            font-size: 61px;
+                            line-height: 1;
+                            @include breakpoint (small-desktop) {
+                                font-size: 50px;
+                            }
+                            @include breakpoint (tablet) {
+                                font-size: 45px;
                             }
                             @include breakpoint (small-tablet) {
-                                font-size: 10px;
-                                padding: 2%;
+                                font-size: 35px;
+                            }
+                            @include breakpoint (phone) {
+                                font-size: 25px;
+                            }
+                            @include breakpoint (mid-phone) {
+                                font-size: 20px;
+                            }
+                        }
+                        .des {
+                            font-family: $openSans-regular;
+                            font-size: 17px;
+                            @include breakpoint (small-desktop) {
+                                font-size: 15px;
+                            }
+                            @include breakpoint (small-tablet) {
+                                font-size: 14px;
+                            }
+                            @include breakpoint (phone) {
+                                font-size: 12px;
+                            }
+                        }
+                        .btn-shop {
+                            margin-top: 7%;
+                            a {
+                                background: transparent;
+                                border: 2px solid $color-white;
+                                color: $color-white;
+                                font-weight: bold;
+                                padding: 0.1% 6%;
+                                border-radius: 6px;
+                                font-size: 27px;
+                                &:hover {
+                                    background: $color-white;
+                                    color: $color-green;
+                                    -webkit-transition: all .3s;
+                                    transition: all .3s;
+                                }
+                                @include breakpoint (small-desktop) {
+                                    font-size: 25px;
+                                }
+                                @include breakpoint (tablet) {
+                                    font-size: 20px;
+                                    padding: 0.1% 4%;
+                                }
+                                @include breakpoint (small-tablet) {
+                                    font-size: 17px;
+                                }
+                                @include breakpoint (phone) {
+                                    font-size: 15px;
+                                }
                             }
                         }
                     }
@@ -288,11 +309,20 @@
         }
         .slide2 {
             font-family: $bebasNeue-regular;
+            /*.regular>div {
+                border: 1px solid;
+            }*/
+            /*.regular .item-slide:first-child {
+                background: red !important;
+            }*/
             .regular {
                 margin: 0;
                 .item-slide {
                     padding: 15px 0;
+                    border: 2px solid transparent;
+                    
                 }
+
                 .img-slide {
                     float: left;
                     width: 50%;
@@ -358,23 +388,27 @@
                         font-size: 9px !important;
                     }
                 }
+                .item-bor {
+                    border-left-color: $color-gray6;
+                    border-right-color: $color-gray6;
+                }
             }
         }
         .products {
             font-family: $bebasNeue-regular;
             .tab {
-                background: $color-green;
+                background: url(../img/bg.png);
                 color: $color-white;
                 h2 {
-                   
+
                     margin: 0;
-                    padding: 2% 0;
-                    font-size: 25px;
+                    padding: 1.5% 0;
+                    font-size: 31px;
                     @include breakpoint (tablet) {
-                        font-size: 20px;
+                        font-size: 25px;
                     }
                     @include breakpoint (small-tablet) {
-                        font-size: 17px;
+                        font-size: 20px;
                     }
                     @include breakpoint (phone) {
                         font-size: 15px;
@@ -421,7 +455,7 @@
                     border-radius: 2px;
                     &:hover {
                         -webkit-box-shadow: 1px 4px 11px -5px;
-                                box-shadow: 1px 4px 11px -5px;
+                        box-shadow: 1px 4px 11px -5px;
                     }
                     @include breakpoint (tablet) {
                         padding: 15px;
@@ -438,7 +472,7 @@
                             overflow: hidden;
                             img {
                                 -webkit-transform: scale(1.2);
-                                        transform: scale(1.2);
+                                transform: scale(1.2);
                                 -webkit-transition: .3s ease-in-out;
                                 transition: .3s ease-in-out;
                             }
@@ -492,13 +526,16 @@
         }
     }
     #footer {
-        background: $color-green;
+        background: url(../img/bg.png);
         color: $color-white;
         font-family: $openSans-regular;
         a,
         p {
             @include breakpoint (small-tablet) {
                 font-size: 13px;
+            }
+            @include breakpoint (phone) {
+                font-size: 12px;
             }
         }
         .container {
@@ -524,7 +561,6 @@
                     }
                     a {
                         color: $color-white;
-
                         &:hover {
                             text-decoration: underline;
                         }

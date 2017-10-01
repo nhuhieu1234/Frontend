@@ -1,7 +1,7 @@
 .slick-dots {
-    bottom: -50px;
+    bottom: -7%;
     @include breakpoint (small-tablet) {
-        bottom: -25px;
+        bottom: -10%;
     }
 }
 .slick-dots li {
