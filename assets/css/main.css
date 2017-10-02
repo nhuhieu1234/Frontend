@@ -328,7 +328,7 @@ i {
       font-family: "BebasNeue Regular";
       color: white;
       font-weight: bold;
-      padding: 0 25px;
+      padding: 0 24px;
       font-size: 21px;
       border-right: 2px solid white; }
       @media (max-width: 1199px) {
@@ -336,7 +336,7 @@ i {
           font-size: 14px; } }
       @media (max-width: 991px) {
         .wrapper #header .navbar li a {
-          padding: 0 15px;
+          padding: 0 14px;
           font-size: 13px; } }
       @media (max-width: 767px) {
         .wrapper #header .navbar li a {
@@ -667,7 +667,7 @@ i {
   .wrapper #footer .bottom-footer {
     padding: 15px;
     text-align: center;
-    background: #2da89b; }
+    background: url(../img/bg-footer.png); }
     @media (max-width: 767px) {
       .wrapper #footer .bottom-footer {
         padding: 2px; } }

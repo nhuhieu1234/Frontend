@@ -172,14 +172,14 @@
                     font-family: $bebasNeue-regular;
                     color: $color-white;
                     font-weight: bold;
-                    padding: 0 25px;
+                    padding: 0 24px;
                     font-size: 21px;
                     border-right: 2px solid $color-white;
                     @include breakpoint (small-desktop) {
                         font-size: 14px;
                     }
                     @include breakpoint (tablet) {
-                        padding: 0 15px;
+                        padding: 0 14px;
                         font-size: 13px;
                     }
                     @include breakpoint (small-tablet) {
@@ -571,7 +571,7 @@
         .bottom-footer {
             padding: 15px;
             text-align: center;
-            background: $color-green5;
+            background: url(../img/bg-footer.png);
             @include breakpoint (small-tablet) {
                 padding: 2px;
             }
