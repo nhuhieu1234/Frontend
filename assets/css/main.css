@@ -63,6 +63,9 @@ i {
   @media (max-width: 767px) {
     .slick-dots {
       bottom: -10%; } }
+  @media (max-width: 480px) {
+    .slick-dots {
+      bottom: -30px; } }
 
 .slick-dots li {
   margin: 0; }
